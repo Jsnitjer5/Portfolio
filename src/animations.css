@@ -1,0 +1,13 @@
+.jump-in {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: jumpIn 0.8s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .jump-in { 
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        animation: none !important;
+    }
+}

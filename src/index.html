@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jort Snitjer - Home Pagina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="output.css" rel="stylesheet">
+    <link rel="icon" href="./img/Jort.png" type="image/icon type">
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
+    <meta name="description" content="Portfolio van Jort Snitjer, derdejaars student Bit Academy Groningen. Bekijk mijn projecten en neem contact op voor webontwikkeling.">
+  </head> 
+<body class="font-haas-grotesk bg-gray-900 text-white">
+  <header class="w-full py-4 bg-gray-900">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-6">
+      <a href="index.html" class="text-2xl font-bold">
+        <span class="text-green-400">Jort</span>
+        <span class="text-green-500">{Snitjer}</span>
+      </a>
+      <button class="md:hidden focus:outline-none" onclick="toggleMenu()" aria-label="Menu openen">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6" aria-hidden="true">
+          <path fill="#22c55e" d="M0 96C0 78.3 14.3 64 32 64h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zm64 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z"/>
+        </svg>
+      </button>
+      <ul id="navLinks" class="hidden md:flex space-x-6 font-bold">
+        <li><a href="index.html" class="text-gray-300 hover:text-green-400">Home</a></li>
+        <li><a href="overmij.html" class="text-gray-300 hover:text-green-400">Over mij</a></li>
+        <li><a href="projects.html" class="text-gray-300 hover:text-green-400">Projecten</a></li>
+        <li><a href="contact.html" class="text-gray-300 hover:text-green-400">Contact</a></li>
+      </ul>
+    </nav>
+    <ul id="mobileMenu" class="hidden flex-col space-y-4 bg-gray-900 text-center py-4 md:hidden font-semibold">
+      <li><a href="index.html" class="text-gray-300 hover:text-green-400">Home</a></li>
+      <li><a href="overmij.html" class="text-gray-300 hover:text-green-400">Over mij</a></li>
+      <li><a href="projects.html" class="text-gray-300 hover:text-green-400">Projecten</a></li>
+      <li><a href="contact.html" class="text-gray-300 hover:text-green-400">Contact</a></li>
+    </ul>
+  </header>
+
+  <script src="script.js"></script>
+
+      <section class="flex flex-col lg:flex-row items-center lg:items-center justify-center max-w-6xl mx-auto py-12 pt-32 px-4 lg:px-8 jump-in gap-12">
+    
+        <img src="img/illustration.png" alt="Placeholder Image" class="w-1/3">
+
+        
+        <div class=" lg:w-1/2 lg:pl-8">
+          <h1 class="text-3xl lg:text-4xl font-bold text-green-400 mb-4 animate-typing overflow-hidden whitespace-nowrap">
+            👋 Hallo ik ben Jort Snitjer
+          </h1>
+          <p class="text-lg text-gray-200 mb-6 tracking-wider font-medium">
+            Welkom op mijn website. Ik ben Jort, een 3e jaars student van de Bit Academy in Groningen.
+          </p>
+          <a href="overmij.html">
+            <button class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-400/60 font-bold">
+              Ga naar over mij
+            </button>
+          </a>
+        </div>
+      
+      </section>
+      
+      <div class="max-w-6xl mx-auto">
+        <hr class="border-green-400 border-t-2 jump-in">
+      </div>
+
+      <section class="flex flex-col lg:flex-row items-center lg:items-center justify-center max-w-6xl mx-auto py-12 pt-32 px-4 lg:px-8 jump-in gap-12">
+  
+        <div class="w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
+          <h2 class="text-3xl lg:text-4xl font-bold text-green-400 mb-4 animate-typing overflow-hidden whitespace-nowrap">
+            🔗 LinkedIn
+          </h2>
+          <p class="text-lg text-gray-200 mb-6 tracking-wider font-medium">
+            Meer informatie? Bekijk mijn LinkedIn!
+          </p>
+          <a target="_blank" href="https://www.linkedin.com/in/jort-snitjer-7023a1230">
+            <button class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-400/60 font-bold">
+              Ga naar LinkedIn
+            </button>
+          </a>
+        </div>
+      
+        <img src="img/contact.webp" alt="Placeholder Image" class="w-1/3">
+      </section>
+      
+      <footer class="bg-gray-900 rounded-lg shadow">
+        <div class="max-w-6xl mx-auto px-6 py-4 md:py-8">
+          <div class="sm:flex sm:items-center sm:justify-between text-center sm:text-left">
+            <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 group justify-center sm:justify-start">
+              <div class="self-center text-2xl">
+                <span class="text-green-400 group-hover:text-green-300">Jort</span>
+                <span class="text-green-500 group-hover:text-green-400">{Snitjer}</span>
+              </div>
+            </a>
+            <ul class="flex flex-wrap justify-center sm:justify-end items-center mb-6 text-sm font-medium text-white sm:mb-0">
+              <li><a href="index.html" class="hover:text-green-500 me-4 md:me-6">Home</a></li>
+              <li><a href="overmij.html" class="hover:text-green-500 me-4 md:me-6">Over mij</a></li>
+              <li><a href="projects.html" class="hover:text-green-500 me-4 md:me-6">Projecten</a></li>
+              <li><a href="contact.html" class="hover:text-green-500">Contact</a></li>
+            </ul>
+          </div>
+          <hr class="border-green-400 border-t-2 my-4">
+          <span class="block text-sm text-white text-center">&copy; 2024 <a href="index.html" class="text-green-500 hover:text-green-400">Jort {Snitjer}&trade;</a>. All Rights Reserved.</span>
+        </div>
+      </footer>
+</body>
+</html>

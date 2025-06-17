@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jort Snitjer - Contact Pagina</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="output.css" rel="stylesheet">
+  <link rel="icon" href="./img/Jort.png" type="image/icon type">
+  <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="description" content="Neem contact op met Jort Snitjer voor webontwikkeling projecten. Telefoon: 06-25224942 of via het contactformulier.">
+</head>
+<body class="font-haas-grotesk bg-gray-900 text-white">
+  <header class="w-full py-4 bg-gray-900">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-6">
+      <a href="index.html" class="text-2xl font-bold">
+        <span class="text-green-400">Jort</span>
+        <span class="text-green-500">{Snitjer}</span>
+      </a>
+      <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 w-6">
+          <path fill="#22c55e" d="M0 96C0 78.3 14.3 64 32 64h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zm64 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z"/>
+        </svg>
+      </button>
+      <ul id="navLinks" class="hidden md:flex space-x-6 font-bold">
+        <li><a href="index.html" class="text-gray-300 hover:text-green-400">Home</a></li>
+        <li><a href="overmij.html" class="text-gray-300 hover:text-green-400">Over mij</a></li>
+        <li><a href="projects.html" class="text-gray-300 hover:text-green-400">Projecten</a></li>
+        <li><a href="contact.html" class="text-gray-300 hover:text-green-400">Contact</a></li>
+      </ul>
+    </nav>
+    <ul id="mobileMenu" class="hidden flex-col space-y-4 bg-gray-900 text-center py-4 md:hidden font-semibold">
+      <li><a href="index.html" class="text-gray-300 hover:text-green-400">Home</a></li>
+      <li><a href="overmij.html" class="text-gray-300 hover:text-green-400">Over mij</a></li>
+      <li><a href="projects.html" class="text-gray-300 hover:text-green-400">Projecten</a></li>
+      <li><a href="contact.html" class="text-gray-300 hover:text-green-400">Contact</a></li>
+    </ul>
+  </header>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script.js"></script>
+
+  <main>
+    <section class="py-24 bg-gray-900 text-white font-haas-grotesk font-medium">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+          <div class="relative bg-gray-800 rounded-md p-6">
+            <h1 class="text-green-400 text-4xl font-bold mb-6">Neem contact op</h1>
+            <div class="text-white space-y-4">
+              <a href="tel:0625224942" class="flex items-center">
+                <i class="fas fa-phone-alt text-green-400"></i>
+                <h5 class="ml-5 text-lg">06-25224942</h5>
+              </a>
+              <a href="mailto:jsnitjer2@st.noorderpoort.nl" class="flex items-center">
+                <i class="fas fa-envelope text-green-400"></i>
+                <h5 class="ml-5 text-lg">jsnitjer2@st.noorderpoort.nl</h5>
+              </a>
+              <a href="https://maps.app.goo.gl/n28tNud46NpXmU9a8" target="_blank" class="flex items-center">
+                <i class="fas fa-map-marker-alt text-green-400"></i>
+                <h5 class="ml-5 text-lg">Muntinglaan 3, Groningen</h5>
+              </a>
+            </div>
+          </div>          
+          <div class="bg-gray-800 p-6 shadow-lg rounded-md">
+            <h2 class="text-green-400 text-4xl font-semibold mb-10">Verstuur een bericht</h2>
+            <form id="contact-form">
+              <input type="text" name="user_name" class="w-full h-12 mb-6 bg-transparent text-white font-medium placeholder-gray-400 border border-gray-700 pl-4 focus:outline-none focus:border-green-500" placeholder="Naam" required>
+              <input type="email" name="user_email" class="w-full h-12 mb-6 bg-transparent text-white font-medium placeholder-gray-400 border border-gray-700 pl-4 focus:outline-none focus:border-green-500" placeholder="E-mail" required>
+              <input type="tel" name="user_phone" class="w-full h-12 mb-6 bg-transparent text-white font-medium placeholder-gray-400 border border-gray-700 pl-4 focus:outline-none focus:border-green-500" placeholder="Telefoon" required>
+              <div class="mb-6">
+                <h4 class="text-gray-400 text-lg mb-4">Voorkeur van communicatie</h4>
+                <div class="flex">
+                  <div class="flex items-center mr-11">
+                    <input id="green-radio-1" type="radio" name="communication_preference" value="E-mail" class="peer w-4 h-4 text-green-500 bg-gray-800 border-gray-600 focus:ring-green-500 focus:ring-2" required>
+                    <label for="green-radio-1" class="ml-2 text-sm font-medium text-gray-400 cursor-pointer">E-mail</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="green-radio-2" type="radio" name="communication_preference" value="Telefoon" class="peer w-4 h-4 text-green-500 bg-gray-800 border-gray-600 focus:ring-green-500 focus:ring-2" required>
+                    <label for="green-radio-2" class="ml-2 text-sm font-medium text-gray-400 cursor-pointer">Telefoon</label>
+                  </div>
+                </div>
+              </div>
+              <textarea name="message" class="w-full h-32 mb-6 bg-transparent text-white font-medium placeholder-gray-400 border border-gray-700 pl-4 pt-2 focus:outline-none focus:border-green-500" placeholder="Bericht" required></textarea>
+              <button type="submit" class="w-full h-12 bg-green-500/50 text-green-500 py-2 px-6 rounded-md hover:bg-green-400/60 font-bold">Verstuur</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>    
+  </main>
+
+  <footer class="bg-gray-900 rounded-lg shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between text-center sm:text-left">
+        <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 group justify-center sm:justify-start">
+          <div class="self-center text-2xl">
+            <span class="text-green-400 group-hover:text-green-300">Jort</span>
+            <span class="text-green-500 group-hover:text-green-400">{Snitjer}</span>
+          </div>
+        </a>
+        <ul class="flex flex-wrap justify-center sm:justify-end items-center mb-6 text-sm font-medium text-white sm:mb-0">
+          <li><a href="index.html" class="hover:text-green-500 me-4 md:me-6">Home</a></li>
+          <li><a href="overmij.html" class="hover:text-green-500 me-4 md:me-6">Over mij</a></li>
+          <li><a href="projects.html" class="hover:text-green-500 me-4 md:me-6">Projecten</a></li>
+          <li><a href="contact.html" class="hover:text-green-500">Contact</a></li>
+        </ul>
+      </div>
+      <hr class="border-green-400 border-t-2 my-4">
+      <span class="block text-sm text-white text-center">&copy; 2024 <a href="index.html" class="text-green-500 hover:text-green-400">Jort {Snitjer}&trade;</a>. All Rights Reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>
